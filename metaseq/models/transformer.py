@@ -570,10 +570,10 @@ class TransformerDecoder(IncrementalDecoder):
             # For instance, if the doc separator is 2, and the tokens are
             # 143 345 2 5435 2
             # The default positions would be
-            # 0 1 2 3 4
+            # 2 3 4 5 6
             # But with document level attention, we would like to reset positions
             # as well on sentence boundaries. So, the positions become
-            # 0 1 2 0 1
+            # 2 3 4 2 3
 
             mask = tokens.ne(self.padding_idx).int()
             mask_with_reset = tokens.ne(self.padding_idx).int()
