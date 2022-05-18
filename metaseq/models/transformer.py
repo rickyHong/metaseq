@@ -382,7 +382,9 @@ class TransformerDecoder(IncrementalDecoder):
             else None
         )
         self.use_alibi: bool = getattr(args, "alibi", False)
-        self.self_attn_doc_sep: int = getattr(args, "self_attn_doc_sep", UNSPECIFIED_DOC_SEP)
+        self.self_attn_doc_sep: int = getattr(
+            args, "self_attn_doc_sep", UNSPECIFIED_DOC_SEP
+        )
         initialize_params_on_gpu = getattr(
             args, "tensor_parallel_init_model_on_gpu", False
         )
