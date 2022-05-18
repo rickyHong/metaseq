@@ -1,5 +1,5 @@
 
-# Metaseq
+# Metaseq -
 A codebase for working with [Open Pre-trained Transformers](projects/OPT).
 
 ## Using OPT with 🤗 Transformers
